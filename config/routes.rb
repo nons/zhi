@@ -1,4 +1,10 @@
 Zhi::Application.routes.draw do
+  resources :words
+
+  resources :word_lists
+
+  resources :users
+
   root to: 'welcome#index'
 
   # The priority is based upon order of creation:
