@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120908231832) do
+ActiveRecord::Schema.define(:version => 20120908233250) do
 
   create_table "users", :force => true do |t|
     t.datetime "created_at",      :null => false
@@ -25,11 +25,15 @@ ActiveRecord::Schema.define(:version => 20120908231832) do
   create_table "word_lists", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
   end
 
   create_table "words", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "word"
   end
+
+  add_index "words", ["word"], :name => "index_words_on_word"
 
 end
