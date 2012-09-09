@@ -1,0 +1,3 @@
+[submodule "app/assets/javascripts/app"]
+	path = app/assets/javascripts/app
+	url = git://github.com/angular/angular-seed.git

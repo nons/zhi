@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 
 private
   def intercept_html_requests
-    render('layouts/dynamic') if request.format == Mime::HTML
+    render('layouts/dynamic', layout: nil, ) if request.format == Mime::HTML
   end
 end
