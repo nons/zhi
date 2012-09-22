@@ -6,9 +6,15 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
 gem 'angularjs-rails'
+gem 'wordnik'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+group :development do
+  gem 'pry'
+  gem 'pry-doc'
+end
 
 group :development, :test do
   gem 'sqlite3'

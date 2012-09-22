@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang='en-US' ng-app='Zhi'>
+  <head>
+    <meta charset="UTF-8" />
+    <title> 智（Zhi）</title>
+    <%= javascript_include_tag "http://code.angularjs.org/1.0.2/angular.js" %>
+    <%= javascript_include_tag "http://code.angularjs.org/1.0.2/angular-resource.js" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div ng-controller='WordnikController'>
+      <input ng-model='query'></input>
+      <button ng-click='search()'>Search</button>
+      <select ng-model="action" required ng-options="act for act in actions">
+      </select>
+      <ul>
+        <li ng-repeat="result in results">
+          {{result | json}}
+        </li>
+      </ul>
+    </div>
+
+    <%= javascript_include_tag "app/app.js" %>
+  </body>
+</html>
